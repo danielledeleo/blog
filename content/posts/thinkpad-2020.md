@@ -46,7 +46,7 @@ Resolution, panel type, brightness, and finish are just as important as the aspe
 
 ## 4. Processor
 
-This section is easy. Ryzen 4000 7nm series APUs. The 8-core, 16-thread Ryzen 7 4800U would be a great chip for an X1 Carbon-style notebook. The higher TDP Ryzen 7 4800H would be great for a T- or P- series notebook. Buying an Intel CPU at this point means buying old tech, and you may very well be gambling future performance away with the speculative execution bug of the week. I have a very hard time convincing myself that a >65W 14nm++ Comet Lake H chip, even if it has 10 cores[^2], would be worth it. I know nanometer numbers are just marketing, but 7nm is the smarter choice, and AMD's integrated graphics are better.
+This section is easy. Ryzen 4000 7nm series APUs. The 8-core, 16-thread Ryzen 7 4800U would be a great chip for an X1 Carbon-style notebook. The higher TDP Ryzen 7 4800H would be great for a T- or P-series notebook. Buying an Intel CPU at this point means buying old tech, and you may very well be gambling future performance away with the speculative execution bug of the week. I have a very hard time convincing myself that a >65W 14nm++ Comet Lake H chip would be worth it, even if it has 10 cores[^2]. I know nanometer numbers are just marketing, but 7nm is the smarter choice, and AMD's integrated graphics are better.
 
 ## 5. Graphics 
 
@@ -74,7 +74,7 @@ Thunderbolt 3.0 with USB-C charging, at least two ports. At least two type-A USB
 
 ## 10. OS 
 
-First class Linux support for all the hardware and power management, as long as it targets a recent kernel. Whatever the current Ubuntu LTS is fine. FreeBSD support would be a game changer too. And please Let me buy it without a Windows license.
+First class Linux support for all the hardware and power management, as long as it targets a recent kernel. Whatever the current Ubuntu LTS is is fine. FreeBSD support would be a game changer too, however unlikely. And please let me buy it without a Windows license.
 
 
 ## 11. Other stuff
@@ -87,7 +87,7 @@ No coil whine. No touch bar. Lenovo does a good job making laptops as thick as t
 
 Lenovo, I know you can do this. The ThinkPad 25 would have been nearly perfect if you just gave it a 16:10 display. You can do this. Do it for me. Oh and throw in a slide out secondary display[^5].
 
-TL;DR: I just want a T495 with 7nm Ryzen with a taller and brighter display that feels like a classic ThinkPad.
+TL;DR: I just want a repairable T495S with 7nm Ryzen with a taller and brighter display that feels like a classic ThinkPad.
 
 
 [![No trackpad, no problem.](/images/thinkpad2020/small/3.jpg)](/images/thinkpad2020/3.jpg)
@@ -96,7 +96,7 @@ TL;DR: I just want a T495 with 7nm Ryzen with a taller and brighter display that
 
 [^2]: A [leaked roadmap](https://wccftech.com/intel-desktop-mobile-cpu-roadmap-leak-14nm-comet-lake-10nm-ice-lake-tiger-lake/) shows 10nm is not coming soon enough. 
 
-[^3]: It's really amazing how good the 16" MacBook Pro's speakers and mic are. And yet they kept the same absolute shite webcam, for some reason.
+[^3]: It's really amazing how good the 16" MacBook Pro's speakers and mic are. They kept the same absolute shite webcam, for some reason.
 
 [^4]: Yes.
 

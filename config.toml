@@ -4,7 +4,7 @@ title = "~jcdl"
 theme = "noteworthy"
 
 [params]
-  twitter = "jagger27"
-  github = "jagger27"
-  gitlab = "jagger27"
+  twitter = "https://twitter.com/jagger27"
+  github = "https://github.com/jagger27"
+  gitlab = "https://gitlab.com/jagger27"
 
