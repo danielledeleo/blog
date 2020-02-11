@@ -1,0 +1,10 @@
+baseURL = "http://jcdl.net/"
+languageCode = "en-ca"
+title = "~jcdl"
+theme = "noteworthy"
+
+[params]
+  twitter = "jagger27"
+  github = "jagger27"
+  gitlab = "jagger27"
+
