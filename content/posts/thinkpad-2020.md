@@ -3,6 +3,11 @@ title: "A ThinkPad For 2020"
 date: 2020-02-10T20:44:27-05:00
 draft: false
 ---
+Updated on February 12, 2020. Here are some links to read and contribute to the converstation.
+
+- [Tildes](https://tildes.net/~comp/lrm/what_i_want_to_see_from_2020_thinkpads)
+- [Reddit](https://www.reddit.com/r/thinkpad/comments/f23xb5/what_i_want_to_see_in_2020_thinkpads/)
+
 [![Think.](/images/thinkpad2020/small/2.jpg)](/images/thinkpad2020/2.jpg)
 
 I've always loved ThinkPads. Every time I touch one I feel a pang of regret and jealousy because, for the last few years, I've been using MacBooks. I still have my old T410, used to have an X230T, frequently help my mom with her P53, and a couple years ago I bought an old X60T for $50 to play around with. Every time I pull out that X60T I mourn the death of sensible notebook computing. Inspired by the very best from Apple, Lenovo, and others, this is the machine I would immediately trade in my 16" MacBook Pro for. I fully believe the machine described is practical to manufacture today. These ideas are not that out there.
@@ -70,7 +75,7 @@ Anything less than 80Wh total in a T-series laptop is unacceptable at this point
 
 [![Chunky](/images/thinkpad2020/small/7.jpg)](/images/thinkpad2020/7.jpg)
 
-Thunderbolt 3.0 with USB-C charging, at least two ports. At least two type-A USB-3.whatever ports. SD card slot. RJ-45 Ethernet (a fold out port is fine), 10Gig would be a lovely touch. HDMI. WiFi 6 via mPCIe. 4K webcam, I'll do without the shutter if it means thinner bezels. IR login camera. Smartcard slot. LTE as an option. Fingerprint reader. NFC. Good speakers and a good mic[^3]. Just keep doing what you're doing, Lenovo! Just keep the ports off the back. They're hard to reach. Put cooling vents there instead.
+Thunderbolt 3.0 with USB-C charging, at least two ports. At least two type-A USB-3.whatever ports. SD card slot. RJ-45 Ethernet (a fold out port is fine), 10Gig would be a lovely touch. HDMI. WiFi 6 via mPCIe. 4K webcam[^6], I'll do without the shutter if it means thinner bezels. IR login camera. Smartcard slot. LTE as an option. Fingerprint reader. NFC. Good speakers and a good mic[^3]. Just keep doing what you're doing, Lenovo! Just keep the ports off the back. They're hard to reach. Put cooling vents there instead.
 
 ## 10. OS 
 
@@ -102,3 +107,4 @@ TL;DR: I just want a repairable T495S with 7nm Ryzen with a taller and brighter 
 
 [^5]: [Just kidding.](https://www.lenovo.com/us/en/laptops/thinkpad/w-series/w700ds/)
 
+[^6]: Some commenters in the threads linked at the top of the page have noted that maybe a 4K webcam is overkill. A crisp, autofocusing 1080p webcam would also be fantastic at this point. Smartphone makers can cram 5 or 6 cameras into a single portable device; why can't Lenovo (who makes laptops with fairly thick displays) put a single decent quality 1080p camera in their $2000+ machines?
