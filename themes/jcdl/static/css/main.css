@@ -1,0 +1,50 @@
+:root {
+	--main-bg-colour: #282a36;
+	--selection-bg-colour: #44475a;
+	--foreground-colour: #f8f8f2;
+	--comment-colour: #6272a4;
+	--cyan-colour: #8be9fd;
+	--green-colour: #50fa7b;
+	--orange-colour: #ffb86c;
+	--pink-colour: #ff79c6;
+	--purple-colour: #bd93f9;
+	--red-colour: #ff5555;
+	--yellow-colour: #f1fa8c;
+}
+
+body {
+	background-color: var(--main-bg-colour);
+	color: var(--foreground-colour);
+	font-family: monospace;
+	font-size: 16px;
+
+	/* reset */
+	padding: 0;
+	margin: 0;
+}
+
+h1, h2, h3, h4, h5, p, ul, div {
+	margin: 0;
+	padding: 0.25rem 1rem;
+}
+
+h1 {
+	margin: 1.5rem 0;
+}
+
+h1::before {
+	content: '# ';
+	color: var(--comment-colour);
+}
+
+.breadcrumbs {
+	list-style: none;
+	background-color: var(--selection-bg-colour);
+}
+
+.breadcrumbs > li > a {
+	color: var(--purple-colour);
+}
+
+
+
