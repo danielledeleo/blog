@@ -2,7 +2,11 @@
 	--main-bg-colour: #282a36;
 	--selection-bg-colour: #44475a;
 	--foreground-colour: #f8f8f2;
+	--foreground-light: #CBCCCC;
+	--foreground-mid: #9EA0A6;
+	--foreground-dark: #717380;
 	--comment-colour: #6272a4;
+	--comment-dark: #535D7F;
 	--cyan-colour: #8be9fd;
 	--green-colour: #50fa7b;
 	--orange-colour: #ffb86c;
@@ -15,36 +19,87 @@
 body {
 	background-color: var(--main-bg-colour);
 	color: var(--foreground-colour);
-	font-family: monospace;
+	font-family: input-mono-narrow, "Andale Mono", monospace;
+	font-style: normal;
 	font-size: 16px;
+
 
 	/* reset */
 	padding: 0;
 	margin: 0;
 }
 
-h1, h2, h3, h4, h5, p, ul, div {
-	margin: 0;
-	padding: 0.25rem 1rem;
-}
-
-h1 {
-	margin: 1.5rem 0;
+h1, h2, h3, h4, h5, p {
+	margin: 1.25rem 0;
+	padding: 0;
 }
 
 h1::before {
-	content: '# ';
-	color: var(--comment-colour);
+	position: absolute;
+	margin: 0 0 0 -2rem;
+	content: '#';
+	color: var(--comment-dark);
+}
+
+h2::before {
+	position: absolute;
+	margin: 0 0 0 -3rem;
+	content: '##';
+	color: var(--comment-dark);
+}
+
+h3::before {
+	position: absolute;
+	margin: 0 0 0 -4rem;
+	content: '###';
+	color: var(--comment-dark);
+}
+
+p {
+	font-family: -apple-system, "Helvetica", sans;
+	line-height: 1.4;
+}
+
+a {
+	color: var(--orange-colour);
+}
+
+.container {
+	width: 500px;
+	margin: 0 auto;
+}
+
+.container > ul {
+	padding: 0;
+}
+
+.content {
 }
 
 .breadcrumbs {
+	margin: 0;
+	padding: 0.25rem;
 	list-style: none;
 	background-color: var(--selection-bg-colour);
+	display: flex;
+	flex-direction: row;
+}
+
+.breadcrumbs > li {
+	display: inline;
 }
 
 .breadcrumbs > li > a {
 	color: var(--purple-colour);
+	margin: 0 0.5rem;
 }
 
+.post-list {
+	list-style: none;
+}
+
+.post-date {
+	color: var(--foreground-mid);
+}
 
 

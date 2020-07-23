@@ -1,8 +1,18 @@
 {{ partial "head.html" }}
 <ul class="breadcrumbs">
-	<li><a href="/">jcdl.net</a> /</li>
+ 	<li><a href="/">jcdl.net</a> /</li>
 </ul>
-<h1>jcdl.net</h1>
-
-{{ partial "footer.html" }}
-
+<div class="container">
+	<h1>{{ .Site.Title }}</h1>
+	<ul class="post-list">
+	{{ range .Site.RegularPages }}
+		<li>
+						<span class="post-date">{{ .Date.Format "Jan 2 2006" }}</span>
+						<a href="{{ .Permalink	}}">{{ .Title}}</a> 
+		</li>
+	{{ end }}
+	</ul>
+	{{ partial "footer.html" }}
+</div>
+</body>
+</html>
