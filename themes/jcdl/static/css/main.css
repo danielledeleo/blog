@@ -83,6 +83,13 @@ a {
 	color: var(--orange-colour);
 }
 
+hr {
+	margin: 2rem 0;
+	border: none;
+	border-top: solid 4px;
+	border-color: var(--comment-colour);
+}
+
 .container {
 	width: 600px;
 	margin: 0 auto;
@@ -133,13 +140,21 @@ a {
 	margin: 0 0.5rem;
 }
 
-.post-list {
+.post-list, .link-list {
 	list-style: none;
 	padding: 0;
 }
 
 .post-date {
 	color: var(--foreground-mid);
+}
+
+.link-list > li > a {
+	color: var(--yellow-colour);
+}
+
+.link-arrow {
+	color: var(--comment-dark);
 }
 
 .tags {

@@ -6,7 +6,7 @@
 </ul>
 <div class="container">
 	<h1>{{ .Title }}</h1>
-	<span class="post-date">Posted on {{ .Date.Format "Jan 2 2006" }}</span>
+	<span class="post-date">Repository: <a href="{{ .Params.git }}">{{ .Params.git }}</a></span>
 	{{ with .Params.tags }}
 	<ul class="tags">
 		{{ range . }}
