@@ -19,7 +19,7 @@ test:
   except:
     - master
 
-pages:
+build:
   stage: build
   script:
     - hugo
