@@ -29,8 +29,6 @@ pages:
 
 deploy:
   stage: deploy
-  needs:
-    - pages
   before_script:
     - apk update && apk add openssh-client bash
   script:
