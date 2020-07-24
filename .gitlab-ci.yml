@@ -31,6 +31,7 @@ build:
     - master
 
 deploy:
+  image: alpine:latest
   stage: deploy
   before_script:
     - apk update && apk add openssh-client bash
