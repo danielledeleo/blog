@@ -1,0 +1,24 @@
+{{ partial "head.html"}}
+<ul class="breadcrumbs">
+  <li><a href="/">jcdl.net</a>/</li>
+	<li><a href="/{{ .Type }}">{{ .Type }}</a>/</li>
+	<li><a href="{{ .Permalink }}">{{ lower .Title }}</a></li>
+</ul>
+<div class="container">
+	<h1>{{ .Title }}</h1>
+	<span class="post-date">Repository: <a href="{{ .Params.git }}">{{ .Params.git }}</a></span>
+	{{ with .Params.tags }}
+	<ul class="tags">
+		{{ range . }}
+		<li> <a href="{{ "tags" | absURL }}/{{ . | urlize }}">{{ . }}</a></li>
+		{{ end }}
+	</ul>
+	{{ end }}
+	<div class="content">
+		{{ .Content }}
+	</div>
+
+  {{ partial "footer.html" }}
+</div>
+</body>
+</html>

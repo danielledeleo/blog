@@ -2,6 +2,8 @@
 title: "A ThinkPad For 2020"
 date: 2020-02-10T20:44:27-05:00
 draft: false
+tags:
+- thinkpad
 ---
 Updated on February 12, 2020. Here are some links to read and contribute to the converstation.
 

@@ -1,10 +1,15 @@
 baseURL = "https://jcdl.net/"
 languageCode = "en-ca"
-title = "~jcdl"
-theme = "noteworthy"
+title = "jcdl"
+theme = "jcdl"
+pygmentsUseClasses = true
 
 [params]
+  pageTitle = "jcdl/blog"
+
+configDir = "config/"
+
+[links]
   twitter = "https://twitter.com/jagger27"
   github = "https://github.com/jagger27"
   gitlab = "https://gitlab.com/jagger27"
-

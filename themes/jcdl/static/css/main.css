@@ -1,0 +1,182 @@
+@import url('https://rsms.me/inter/inter.css');
+
+:root {
+	--main-bg-colour: #282a36;
+	--selection-bg-dark: #313442;
+	--selection-bg-colour: #44475a;
+	--foreground-colour: #f8f8f2;
+	--foreground-light: #CBCCCC;
+	--foreground-mid: #9EA0A6;
+	--foreground-dark: #717380;
+	--comment-colour: #6272a4;
+	--comment-dark: #535D7F;
+	--cyan-colour: #8be9fd;
+	--green-colour: #50fa7b;
+	--orange-colour: #ffb86c;
+	--pink-colour: #ff79c6;
+	--purple-colour: #bd93f9;
+	--red-colour: #ff5555;
+	--yellow-colour: #f1fa8c;
+}
+
+body {
+	background-color: var(--main-bg-colour);
+	color: var(--foreground-colour);
+	font-family: input-mono-narrow, "Andale Mono", monospace;
+	font-style: normal;
+	font-size: 16px;
+
+	/* reset */
+	padding: 0;
+	margin: 0;
+}
+
+h1, h2, h3, h4, h5 {
+	margin: 2.5rem 0 0 0;
+	padding: 0;
+}
+
+h1 {
+	margin-bottom: 1rem;
+}
+
+h1::before {
+	position: absolute;
+	margin: 0 0 0 -2rem;
+	content: '#';
+	color: var(--comment-dark);
+}
+
+h2::before {
+	position: absolute;
+	margin: 0 0 0 -3rem;
+	content: '##';
+	color: var(--comment-dark);
+}
+
+h3::before {
+	position: absolute;
+	margin: 0 0 0 -4rem;
+	content: '###';
+	color: var(--comment-dark);
+}
+
+p {
+	padding: 1.5rem 2.5rem;
+	font-family: "Inter", "Helvetica", sans-serif;
+	line-height: 1.7;
+	background-color: var(--selection-bg-dark);
+}
+
+pre {
+	padding: 1.5rem;
+	border: 4px solid;
+	border-color: var(--comment-colour);
+	overflow-x: scroll;
+}
+
+pre > code {
+	font-family: input-mono-narrow, "Andale Mono", monospace;
+}
+
+a {
+	color: var(--orange-colour);
+}
+
+hr {
+	margin: 2rem 0;
+	border: none;
+	border-top: solid 4px;
+	border-color: var(--comment-colour);
+}
+
+.container {
+	width: 600px;
+	margin: 0 auto;
+}
+
+.content > ul, .content > ol {
+	padding: 0rem 2.5rem;
+}
+
+.content > ul > li {
+	padding: 0 0.5rem;
+}
+
+.content > ul > li, .content > ol > li {
+	line-height: 1.7;
+	margin: 0;
+}
+
+.content > ul > li::marker {
+	content: '-';
+	color: var(--comment-colour);
+}
+
+.content > ol > li::marker {
+	color: var(--comment-colour);
+
+}
+
+.content > .post-date {
+	color: var(--foreground-mid);
+}
+
+.breadcrumbs {
+	margin: 0;
+	padding: 0.25rem;
+	list-style: none;
+	background-color: var(--selection-bg-colour);
+	display: flex;
+	flex-direction: row;
+}
+
+.breadcrumbs > li {
+	display: inline;
+}
+
+.breadcrumbs > li > a {
+	color: var(--purple-colour);
+	margin: 0 0.5rem;
+}
+
+.post-list, .link-list {
+	list-style: none;
+	padding: 0;
+}
+
+.post-date {
+	color: var(--foreground-mid);
+}
+
+.link-list > li > a {
+	color: var(--yellow-colour);
+}
+
+.link-arrow {
+	color: var(--comment-dark);
+}
+
+.tags {
+	display: flex;
+	list-style: none;
+	padding: 0;
+}
+
+
+.tags > li {
+	margin: 0 0.7rem 0 0;
+}
+
+.tags > li > a {
+	color: var(--yellow-colour)
+}
+
+.footer {
+	margin: 3rem 0;
+	color: var(--foreground-dark);
+}
+
+.footer > .heart {
+	color: var(--pink-colour);
+}
