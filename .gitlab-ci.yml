@@ -7,13 +7,20 @@ image: registry.gitlab.com/pages/hugo:latest
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
 
+stages:
+  - test
+  - build
+  - deploy
+
 test:
+  stage: test
   script:
     - hugo
   except:
     - master
 
 pages:
+  stage: build
   script:
     - hugo
     - tar czf public.tar.gz public deploy.sh
@@ -21,6 +28,7 @@ pages:
     - master
 
 deploy:
+  stage: deploy
   needs:
     - pages
   before_script:
