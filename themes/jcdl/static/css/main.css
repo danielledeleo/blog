@@ -1,5 +1,8 @@
+@import url('https://rsms.me/inter/inter.css');
+
 :root {
 	--main-bg-colour: #282a36;
+	--selection-bg-dark: #313442;
 	--selection-bg-colour: #44475a;
 	--foreground-colour: #f8f8f2;
 	--foreground-light: #CBCCCC;
@@ -23,15 +26,18 @@ body {
 	font-style: normal;
 	font-size: 16px;
 
-
 	/* reset */
 	padding: 0;
 	margin: 0;
 }
 
-h1, h2, h3, h4, h5, p {
-	margin: 1.25rem 0;
+h1, h2, h3, h4, h5 {
+	margin: 2.5rem 0 0 0;
 	padding: 0;
+}
+
+h1 {
+	margin-bottom: 1rem;
 }
 
 h1::before {
@@ -56,8 +62,21 @@ h3::before {
 }
 
 p {
-	font-family: -apple-system, "Helvetica", sans;
-	line-height: 1.4;
+	padding: 1.5rem 2.5rem;
+	font-family: "Inter", "Helvetica", sans-serif;
+	line-height: 1.7;
+	background-color: var(--selection-bg-dark);
+}
+
+pre {
+	padding: 1.5rem;
+	border: 4px solid;
+	border-color: var(--comment-colour);
+	overflow-x: scroll;
+}
+
+pre > code {
+	font-family: input-mono-narrow, "Andale Mono", monospace;
 }
 
 a {
@@ -65,15 +84,35 @@ a {
 }
 
 .container {
-	width: 500px;
+	width: 600px;
 	margin: 0 auto;
 }
 
-.container > ul {
-	padding: 0;
+.content > ul, .content > ol {
+	padding: 0rem 2.5rem;
 }
 
-.content {
+.content > ul > li {
+	padding: 0 0.5rem;
+}
+
+.content > ul > li, .content > ol > li {
+	line-height: 1.7;
+	margin: 0;
+}
+
+.content > ul > li::marker {
+	content: '-';
+	color: var(--comment-colour);
+}
+
+.content > ol > li::marker {
+	color: var(--comment-colour);
+
+}
+
+.content > .post-date {
+	color: var(--foreground-mid);
 }
 
 .breadcrumbs {
@@ -96,10 +135,33 @@ a {
 
 .post-list {
 	list-style: none;
+	padding: 0;
 }
 
 .post-date {
 	color: var(--foreground-mid);
 }
 
+.tags {
+	display: flex;
+	list-style: none;
+	padding: 0;
+}
 
+
+.tags > li {
+	margin: 0 0.7rem 0 0;
+}
+
+.tags > li > a {
+	color: var(--yellow-colour)
+}
+
+.footer {
+	margin: 3rem 0;
+	color: var(--foreground-dark);
+}
+
+.footer > .heart {
+	color: var(--pink-colour);
+}
