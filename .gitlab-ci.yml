@@ -16,9 +16,7 @@ test:
 pages:
   script:
     - hugo
-  artifacts:
-    paths:
-      - public
+    - tar czf public.tar.gz public deploy.sh
   only:
     - master
 
@@ -38,4 +36,5 @@ deploy:
     - echo "$SSH_KNOWN_HOSTS" > ~/.ssh/known_hosts
     # ssh commands here
 
-    -
+    - scp public.tar.gz gitlab@$SSH_HOSTNAME:. 
+    - ssh gitlab@$SSH_HOSTNAME -C 'tar xzf public.tar.gz; chmod +x deploy.sh; ./deploy.sh'
