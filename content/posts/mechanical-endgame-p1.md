@@ -6,7 +6,7 @@ tags:
 - keyboards
 ---
 
-It's no secret that I'm obsessed with mechanical keyboards. Ever since I bought my first mechanical keyboard in 2009, I've been hooked. This short post is a stream a stream of consciousness recount of my years of 'keebing'. 
+It's no secret that I'm obsessed with mechanical keyboards. Ever since I bought my first mechanical keyboard in 2009, I've been hooked. This (not so) short post is a stream a stream of consciousness recount of my years of 'keebing'. 
 
 ## Naive Beginnings
 Back in the stone age of 2009, I bought my first honest-to-goodness 'mech: a Razer Blackwidow, with Cherry MX Blues. It was plasticky, loud, clicky, and I loved it. Back then I wasn't so in tune with how my hands feel after a long typing or programming session (as I did neither back then), so I have little to say about how it really performed. I held onto it for about a year and a half before selling it to a friend, who used it for years after.
@@ -20,7 +20,9 @@ Unbeknownst to me, the Blackwidow wasn't my first mechanical keyboard. Circa 200
 ...there were Cooler Master boards. Before I sold my Blackwidow I picked up a Cooler Master QuickFire Rapid TKL, again with Cherry MX Blue switches. These were quite rigid and tight for plastic case keyboards, and I look upon them pretty fondly, despite their thin stock keycaps. Soon after that, I picked up one with Cherry MX Brown switches, and sold the MX Blue one to another friend. This intro to so-called "tactile" switches (a term I would never use for a switch as crappy as MX Browns today) would prove to be important. At some point I picked up a red and white Taihao PBT set for this board for way more than I care to admit. I still have those keycaps lying around in a ziplock somewhere.
 
 ## Misguided Matias
-While I still had my QFR with browns, I also picked up a Matias Tactile Pro—misnamed, as it is a clicky switch keyboard. I bought it in search of a "better than MX Blue" clicky board, still thinking that I preferred clicky switches to tactile. Despite picking it up, I still used my QFR more. Matias clicky switches are indeed better than blues, in my opinion. I still have this keyboard and it has seen very little use, e
+While I still had my QFR with browns, I also picked up a Matias Tactile Pro—misnamed, as it is a clicky switch keyboard. I bought it in search of a "better than MX Blue" clicky board, still thinking that I preferred clicky switches to tactile. Despite picking it up, I still used my QFR more. Matias clicky switches are indeed better than blues, in my opinion. I still have this keyboard and it has seen very little use.
+
+Matias was one of only a handful of companies that has tried (and failed) to revive the Alps key switch. They didn't get it quite right. The switches are extremely scratchy, and cannot be lubed. I still have hope a Chinese company like Kailh or Durock can pull it off as they did for the MX switch.
 
 ## Happy Hacking, not much hacking
 Finally around 2012 I worked up the courage to spend more than $150 on a keyboard and bought something way out of left field: a PFU HHKB—Happy Hacking Keyboard from EliteKeyboards. This little wonder was my come to Jesus moment for tactile keyboards. Ever so subtle in its stock tactility, my fingers happily thocked away on its strange condensed layout. The HHKB is so small that it doesn't have arrow keys. Backspace is where backslash is, control is where caps lock is, caps lock is gone, and tilde is way over on the right. It is truly an incredible layout that makes for very little hand movement. 8 years on, I still have this keyboard, and it was my main board for about 3 years suffering through my rage gaming life phase. Dishwashing money well spent, I'd say.

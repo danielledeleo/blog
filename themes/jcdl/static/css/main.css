@@ -24,7 +24,7 @@ body {
 	color: var(--foreground-colour);
 	font-family: input-mono-narrow, "Andale Mono", monospace;
 	font-style: normal;
-	font-size: 16px;
+	font-size: 15px;
 
 	/* reset */
 	padding: 0;
@@ -39,30 +39,28 @@ h1, h2, h3, h4, h5 {
 h1 {
 	margin-bottom: 1rem;
 }
+h1::before, h2::before, h3::before {
+	color: var(--comment-dark);
+}
 
 h1::before {
-	position: absolute;
-	margin: 0 0 0 -2rem;
 	content: '#';
-	color: var(--comment-dark);
+	margin: 0 0.75rem 0 0;
 }
 
 h2::before {
-	position: absolute;
-	margin: 0 0 0 -3rem;
 	content: '##';
-	color: var(--comment-dark);
+	margin: 0 0.75rem 0 0;
 }
 
 h3::before {
-	position: absolute;
-	margin: 0 0 0 -4rem;
 	content: '###';
-	color: var(--comment-dark);
+	margin: 0 0.75rem 0 0;
 }
 
 p {
-	padding: 1.5rem 2.5rem;
+	margin: 1.5rem -1.5rem;
+	padding: 1rem 1.5rem;
 	font-family: "Inter", "Helvetica", sans-serif;
 	line-height: 1.7;
 	background-color: var(--selection-bg-dark);
@@ -90,10 +88,34 @@ hr {
 	border-color: var(--comment-colour);
 }
 
-.container {
-	width: 600px;
-	margin: 0 auto;
+@media only screen and (min-width: 740px) {
+	body {
+		font-size: 16px;
+	}
+
+	.container {
+		width: 640px;
+		margin: 0 auto;
+	}
+
+	h1::before {
+		position: absolute;
+		margin: 0 0 0 -2rem;
+	}
+	h2::before {
+		position: absolute;
+		margin: 0 0 0 -3rem;
+	}
+	h3::before {
+		position: absolute;
+		margin: 0 0 0 -4rem;
+	}
 }
+
+.container {
+	padding: 0 1.5rem;
+}
+
 
 .content > ul, .content > ol {
 	padding: 0rem 2.5rem;
@@ -145,6 +167,21 @@ hr {
 	padding: 0;
 }
 
+.post-list .post-date {
+	display: block;
+	margin: 0 0.75rem 0 0;
+	white-space: nowrap;
+}
+
+.post-list li {
+	display: flex;
+	margin: 0.25rem 0;
+}
+
+.post-list li .blurb {
+	margin: 0 0 0 0.75rem;
+}
+
 .post-date {
 	color: var(--foreground-mid);
 }
@@ -155,6 +192,11 @@ hr {
 
 .link-arrow {
 	color: var(--comment-dark);
+}
+
+.musing-list {
+	padding: 0;
+	list-style: none;
 }
 
 .tags {

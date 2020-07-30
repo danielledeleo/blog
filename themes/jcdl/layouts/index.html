@@ -4,11 +4,21 @@
 </ul>
 <div class="container">
 	<h1>{{ .Site.Title }}</h1>
+	<h2>musings</h2>
+	<ul class="musing-list">
+		{{ range where .Site.RegularPages "Type" "musings" | first 10 }}
+			<li>
+				<span class="block post-date">{{ .Date.Format "Jan 2, 2006" }}</span>
+				<span class="musing-thought">{{ .Params.Thought }}</span>
+			</li>
+		{{ end }}
+	</ul>
+
 	<h2>posts</h2>
 	<ul class="post-list">
 		{{ range where .Site.RegularPages "Type" "posts" }}
 			<li>
-				<span class="post-date">{{ .Date.Format "Jan 2 2006" }}</span>
+				<span class="post-date">{{ .Date.Format "Jan 2, 2006" }}</span>
 				<a href="{{ .Permalink	}}">{{ .Title}}</a> 
 			</li>
 		{{ end }}
@@ -18,8 +28,9 @@
 	<ul class="post-list">
 		{{ range where .Site.RegularPages "Type" "projects" }}
 			<li>
-				<span class="post-date">{{ .Date.Format "Jan 2 2006" }}</span>
-				<a href="{{ .Permalink	}}">{{ .Title}}</a> ({{ .Params.blurb }})
+				<span class="post-date">{{ .Date.Format "Jan 2, 2006" }}</span>
+				<a href="{{ .Permalink	}}">{{ .Title}}</a>
+				<span class="blurb">({{ .Params.blurb }})</span>
 			</li>
 		{{ end }}
 	</ul>
