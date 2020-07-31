@@ -22,7 +22,7 @@ test:
 build:
   stage: build
   script:
-    - echo "commit = \"$(git rev-parse HEAD)\"" | tr -d '\n' > data/git.toml
+    - echo "commit = \"$CI_COMMIT_SHA\"" > data/git.toml
     - hugo
     - tar czf public.tar.gz public deploy.sh
   artifacts:
