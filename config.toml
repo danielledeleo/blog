@@ -1,13 +1,15 @@
-baseURL = "https://jcdl.net/"
+baseURL = "/"
 languageCode = "en-ca"
 title = "jcdl"
 theme = "jcdl"
 pygmentsUseClasses = true
+relativeURLs = true 
 
 [params]
   pageTitle = "jcdl/blog"
-
-configDir = "config/"
+  configDir = "config/"
+  src = "https://gitlab.com/jagger27/blog/"
+  commitPath = "-/commit/"
 
 [links]
   twitter = "https://twitter.com/jagger27"

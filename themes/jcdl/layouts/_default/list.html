@@ -7,19 +7,20 @@
     <li><a href="{{ .Permalink }}">{{ lower .Title }}</a></li>
 </ul>
 <div class="container">
-    <h1>{{ .Title }}</h1>
+    <h1>{{ lower .Title }}</h1>
 
     <ul class="post-list">
         {{ if .Data.Terms }}
             {{ range .Data.Terms.ByCount }}
             <li>
-                <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> {{.Count }}
+                <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
+                <span class="blurb">({{.Count }})</span>
             </li>
             {{ end }}
         {{ else }}
             {{ range .Pages }}
             <li>
-                <span class="post-date">{{ .Date.Format "Jan 2 2006" }}</span>
+                <span class="post-date">{{ .Date.Format "Jan 2, 2006" }}</span>
                 <a href="{{ .Permalink }}">{{ .Title }}</a>
             </li>
             {{ end }}

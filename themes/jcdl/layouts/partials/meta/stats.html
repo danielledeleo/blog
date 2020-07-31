@@ -1,0 +1,25 @@
+{{ $scratch := newScratch }}
+<h2>pages</h2>
+<pre><code>{{ range site.Sections }}{{ lower .Title }}: {{ len .Pages }}
+{{ end }}
+total: {{ len site.RegularPages }}</code></pre>
+		
+		<h2>word count</h2>
+<pre><code>
+{{- range site.Sections -}}
+	{{- range .Pages -}}
+		{{ $scratch.Set "subtotal" (add (int ($scratch.Get "subtotal")) .WordCount) -}}
+	{{ end -}}
+	{{ lower .Title }}: 
+  {{ $scratch.Get "subtotal" }} words
+  {{ div (int ($scratch.Get "subtotal")) (len .Pages) }} average
+	{{- $scratch.Set "total" (add (int ($scratch.Get "total")) (int ($scratch.Get "subtotal"))) }}
+	{{- $scratch.Set "subtotal" 0 }}
+
+{{ end }}-----
+total: {{ $scratch.Get "total" }} words</code></pre>
+
+<h2>hugo</h2>
+<pre><code>Generated with Hugo {{ hugo.Version }}
+Build date: {{ now }}
+</code></pre>

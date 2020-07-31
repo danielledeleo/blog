@@ -66,15 +66,35 @@ p {
 	background-color: var(--selection-bg-dark);
 }
 
-pre {
-	padding: 1.5rem;
-	border: 4px solid;
-	border-color: var(--comment-colour);
-	overflow-x: scroll;
+/* footnotes */
+.footnotes > ol {
+	padding: 0;
+}
+
+.footnotes > ol > li {
+	padding: 0 0 0 1.5rem;
 }
 
 pre > code {
+	overflow-x: scroll;
+
+	display: block;
+	padding: 1.5rem;
+	border: 4px solid;
+	border-color: var(--comment-colour);
+	
 	font-family: input-mono-narrow, "Andale Mono", monospace;
+}
+
+[data-lang] {
+	margin: 1.5rem 0 0 0;
+}
+
+[data-lang]:before {
+	display: block;
+	content: attr(data-lang);
+	margin: -3rem 0 2rem -1.25rem;
+	color: var(--comment-dark);
 }
 
 a {
@@ -88,12 +108,13 @@ hr {
 	border-color: var(--comment-colour);
 }
 
-@media only screen and (min-width: 740px) {
+@media only screen and (min-width: 680px) {
 	body {
 		font-size: 16px;
 	}
 
 	.container {
+		padding: 1.5rem;
 		width: 640px;
 		margin: 0 auto;
 	}
@@ -109,6 +130,9 @@ hr {
 	h3::before {
 		position: absolute;
 		margin: 0 0 0 -4rem;
+	}
+	pre {
+		margin: 1.5rem -1.5rem;
 	}
 }
 
@@ -162,7 +186,7 @@ hr {
 	margin: 0 0.5rem;
 }
 
-.post-list, .link-list {
+.post-list, .link-list, .musing-list {
 	list-style: none;
 	padding: 0;
 }
@@ -183,20 +207,19 @@ hr {
 }
 
 .post-date {
-	color: var(--foreground-mid);
-}
-
-.link-list > li > a {
-	color: var(--yellow-colour);
+	color: var(--foreground-dark);
 }
 
 .link-arrow {
 	color: var(--comment-dark);
 }
 
-.musing-list {
-	padding: 0;
-	list-style: none;
+.musing-list li {
+	margin: 0 0 1.5rem 0;
+}
+
+.musing-list li p {
+	margin: 0.5rem -1.5rem;
 }
 
 .tags {
@@ -214,6 +237,10 @@ hr {
 	color: var(--yellow-colour)
 }
 
+.permalink {
+	color: var(--purple-colour)
+}
+
 .footer {
 	margin: 3rem 0;
 	color: var(--foreground-dark);
@@ -221,4 +248,8 @@ hr {
 
 .footer > .heart {
 	color: var(--pink-colour);
+}
+
+a[href*='//'] {
+	color: var(--yellow-colour);
 }

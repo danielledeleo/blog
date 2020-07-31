@@ -1,0 +1,19 @@
+{{ partial "head.html"}}
+<ul class="breadcrumbs">
+    <li><a href="/">jcdl.net</a>/</li>
+    <li><a href="{{ .Permalink }}">{{ lower .Title }}</a></li>
+</ul>
+<div class="container">
+    <h1>{{ lower .Title }}</h1>
+
+    <ul class="link-list">
+        {{ range .Pages }}
+        <li>
+            <span class="link-arrow">=&gt; </span><a href="{{ .Permalink }}">{{ .Title }}</a>
+        </li>
+        {{ end }}
+    </ul>
+  {{ partial "footer.html" }}
+</div>
+</body>
+</html>

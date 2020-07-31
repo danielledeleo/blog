@@ -1,0 +1,31 @@
+{{ $paginator := .Paginate (where .Pages "Type" "musings") 15 }}
+{{ partial "head.html"}}
+<ul class="breadcrumbs">
+    <li><a href="/">jcdl.net</a>/</li>
+    {{ if .Data.Term }}
+    <li><a href="/tags">tags</a>/</li>
+    {{ end }}
+    <li><a href="{{ .Permalink }}">{{ lower .Title }}</a></li>
+</ul>
+<div class="container">
+    <h1>{{ .Title }}</h1>
+
+    <ul class="musing-list">
+        {{ range $paginator.Pages }}
+        <li>
+            <span class="post-date">{{ .Date.Format "Jan 2, 2006" }}</span>
+            <a href="{{ .Permalink }}">{{ .Params.Title }}</a>
+            {{ .Content }}
+        </li>
+        {{ end }}
+    </ul>
+    {{ if $paginator.HasPrev }}
+    <a href="{{ $paginator.Prev.URL }}">prev</a>
+    {{ end }}
+    {{ if $paginator.HasNext }}
+    <a href="{{ $paginator.Next.URL }}">next</a>
+    {{ end }}
+  {{ partial "footer.html" }}
+</div>
+</body>
+</html>

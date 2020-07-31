@@ -1,3 +1,4 @@
+{{ $musings := .Paginate (where .Site.RegularPages "Type" "musings") 2 }}
 {{ partial "head.html" }}
 <ul class="breadcrumbs">
  	<li><a href="/">jcdl.net</a>/</li>
@@ -6,25 +7,29 @@
 	<h1>{{ .Site.Title }}</h1>
 	<h2>musings</h2>
 	<ul class="musing-list">
-		{{ range where .Site.RegularPages "Type" "musings" | first 10 }}
+		{{ range $musings.Pages }}
 			<li>
 				<span class="block post-date">{{ .Date.Format "Jan 2, 2006" }}</span>
-				<span class="musing-thought">{{ .Params.Thought }}</span>
+				<span>{{ .Summary }}</span>
+				<a class="permalink" href="{{ .Permalink }}">#</a>
 			</li>
 		{{ end }}
 	</ul>
+	{{ if $musings.HasNext }}
+		<a href="{{ "musings" | absURL}}">more</a>
+	{{ end }}
 
 	<h2>posts</h2>
 	<ul class="post-list">
 		{{ range where .Site.RegularPages "Type" "posts" }}
 			<li>
 				<span class="post-date">{{ .Date.Format "Jan 2, 2006" }}</span>
-				<a href="{{ .Permalink	}}">{{ .Title}}</a> 
+				<a href="{{ .Permalink	}}">{{ .Title}}</a>
 			</li>
 		{{ end }}
 	</ul>
-	<h2>projects</h2>
 
+	<h2>projects</h2>
 	<ul class="post-list">
 		{{ range where .Site.RegularPages "Type" "projects" }}
 			<li>
@@ -34,8 +39,27 @@
 			</li>
 		{{ end }}
 	</ul>
+
 	<h2>social</h2>
 	{{ partial "social.html" }}
+
+	<h2>meta</h2>
+    <ul class="link-list">
+		{{ if site.Data.git }}
+		<li>
+			<span class="link-arrow">=&gt; </span>
+			<a href="{{ path.Join site.Params.src site.Params.CommitPath site.Data.git.commit }}">changes</a>
+		</li>
+		{{ end }}
+		{{ if .Site.Params.src }}
+        <li><span class="link-arrow">=&gt; </span><a href="{{ .Site.Params.src }}">source code</a></li>
+		{{ end }}
+	</ul>
+	<ul class="link-list">
+		{{ range where .Site.RegularPages "Type" "meta" }}
+			<li><span class="link-arrow">=&gt; </span><a href="{{ .Permalink }}"> {{ .Title}}</a></li>
+		{{ end }}
+	</ul>
 	{{ partial "footer.html" }}
 </div>
 </body>

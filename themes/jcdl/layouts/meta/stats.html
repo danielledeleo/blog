@@ -6,16 +6,11 @@
 </ul>
 <div class="container">
 	<h1>{{ .Title }}</h1>
-	<span class="post-date">Posted on {{ .Date.Format "Jan 2, 2006" }}</span>
-	{{ with .Params.tags }}
-	<ul class="tags">
-		{{ range . }}
-		<li> <a href="{{ "tags" | absURL }}/{{ . | urlize }}">{{ . }}</a></li>
-		{{ end }}
-	</ul>
-	{{ end }}
 	<div class="content">
 		{{ .Content }}
+		{{ if eq (lower .Title) "stats" }}
+			{{ partial "meta/stats.html" }}
+		{{ end }}
 	</div>
 
   {{ partial "footer.html" }}
