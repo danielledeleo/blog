@@ -9,21 +9,22 @@
 	<ul class="musing-list">
 		{{ range $musings.Pages }}
 			<li>
-				<span class="block post-date">{{ .Date.Format "Jan 2, 2006" }}</span>
-				<span>{{ .Summary }}</span>
-				<a class="permalink" href="{{ .Permalink }}">#</a>
+				<span class="block post-date">{{ .Date.Format "Jan 02, 2006" }}</span>
+		  	<span class="link-arrow">=&gt; </span>
+				<a class="permalink" href="{{ .Permalink }}">{{.Title}}</a>
+				<span>{{ .Content }}</span>
 			</li>
 		{{ end }}
 	</ul>
 	{{ if $musings.HasNext }}
-		<span class="link-arrow">=&gt; </span><a href="{{ "musings" | absURL}}">more</a>
+	<span class="link-arrow">=&gt; </span><a href="{{ "musings" | absURL}}">{{ (where .Site.RegularPages "Type" "musings") | len | add -2 }} more</a>
 	{{ end }}
 
 	<h2>posts</h2>
 	<ul class="post-list">
 		{{ range where .Site.RegularPages "Type" "posts" }}
 			<li>
-				<span class="post-date">{{ .Date.Format "Jan 2, 2006" }}</span>
+				<span class="post-date">{{ .Date.Format "Jan 02, 2006" }}</span>
 				<a href="{{ .Permalink	}}">{{ .Title}}</a>
 			</li>
 		{{ end }}
@@ -33,7 +34,7 @@
 	<ul class="post-list">
 		{{ range where .Site.RegularPages "Type" "projects" }}
 			<li>
-				<span class="post-date">{{ .Date.Format "Jan 2, 2006" }}</span>
+				<span class="post-date">{{ .Date.Format "Jan 02, 2006" }}</span>
 				<a href="{{ .Permalink	}}">{{ .Title}}</a>
 				<span class="blurb">({{ .Params.blurb }})</span>
 			</li>
