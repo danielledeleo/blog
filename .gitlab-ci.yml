@@ -17,7 +17,7 @@ test:
   script:
     - hugo
   except:
-    - master
+    - main
 
 build:
   stage: build
@@ -29,7 +29,7 @@ build:
     paths:
       - public.tar.gz
   only:
-    - master
+    - main
 
 deploy:
   image: alpine:latest
@@ -41,11 +41,12 @@ deploy:
     - eval $(ssh-agent -s)
 
     # add ssh key stored in SSH_PRIVATE_KEY variable to the agent store
-    - bash -c 'ssh-add <(echo "$SSH_PRIVATE_KEY")'
+    # encoded in base64 so it can be masked in the CI logs
+    - bash -c 'ssh-add <(base64 -d <(echo $SSH_PRIVATE_KEY))'
 
     - mkdir -p ~/.ssh
     - echo "$SSH_KNOWN_HOSTS" > ~/.ssh/known_hosts
-    # ssh commands here
 
+    # ssh commands here
     - scp public.tar.gz gitlab@$SSH_HOSTNAME:. 
-    - ssh gitlab@$SSH_HOSTNAME -C 'tar xzf public.tar.gz; chmod +x deploy.sh; ./deploy.sh'
+    - ssh gitlab@$SSH_HOSTNAME -C 'tar xzf public.tar.gz; ./deploy.sh'
