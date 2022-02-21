@@ -253,3 +253,57 @@ hr {
 a[href*='//'] {
 	color: var(--yellow-colour);
 }
+
+.rights {
+	margin: 0.75rem 0 0 0;
+	display: flex;
+	column-gap: 0.5rem;
+}
+
+.flag {
+	display: flex;
+	flex-direction: column;
+	width: 2rem;
+	height: 1.2rem;
+}
+
+.stripe {
+	flex-grow: 1;
+	width: 100%;
+}
+
+.t-blue {
+	background: #55CDFC;
+}
+
+.t-pink {
+	background: #F7A8B8;
+}
+
+.t-white {
+	background: #FFF;
+}
+
+.p-red {
+	background: #FF0018;
+}
+
+.p-orange {
+	background: #FFA52C;
+}
+
+.p-yellow {
+	background: #FFFF41;
+}
+
+.p-green {
+	background: #008018;
+}
+
+.p-blue {
+	background: #0000F9;
+}
+
+.p-violet {
+	background: #86007D;
+}
