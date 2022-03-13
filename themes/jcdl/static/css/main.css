@@ -19,12 +19,17 @@
 	--yellow-colour: #f1fa8c;
 }
 
+@font-face {
+	font-family: "Berkeley Mono";
+	src: url('/fonts/BerkeleyMonoVariable-Regular.woff2') format('woff2');
+}
+
 body {
 	background-color: var(--main-bg-colour);
 	color: var(--foreground-colour);
-	font-family: input-mono-narrow, "Andale Mono", monospace;
-	font-style: normal;
-	font-size: 15px;
+	font-family: "Berkeley Mono", "Andale Mono", monospace;
+	font-size: 14px;
+	font-variation-settings: 'wght' 100;
 
 	/* reset */
 	padding: 0;
@@ -39,6 +44,7 @@ h1, h2, h3, h4, h5 {
 h1 {
 	margin-bottom: 1rem;
 }
+
 h1::before, h2::before, h3::before {
 	color: var(--comment-dark);
 }
@@ -63,6 +69,7 @@ p {
 	padding: 1rem 1.5rem;
 	font-family: "Inter", "Helvetica", sans-serif;
 	line-height: 1.7;
+
 	background-color: var(--selection-bg-dark);
 }
 
@@ -83,7 +90,7 @@ pre > code {
 	border: 4px solid;
 	border-color: var(--comment-colour);
 	
-	font-family: input-mono-narrow, "Andale Mono", monospace;
+	font-family: "Berkeley Mono", "Andale Mono", monospace;
 }
 
 [data-lang] {
@@ -110,7 +117,7 @@ hr {
 
 @media only screen and (min-width: 680px) {
 	body {
-		font-size: 16px;
+		font-size: 15px;
 	}
 
 	.container {
