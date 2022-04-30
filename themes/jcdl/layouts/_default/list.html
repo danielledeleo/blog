@@ -20,7 +20,7 @@
         {{ else }}
             {{ range .Pages }}
             <li>
-                <span class="post-date">{{ .Date.Format "Jan 02, 2006" }}</span>
+                {{ partial "snippets/postdate.html" . }}
                 <a href="{{ .Permalink }}">{{ .Title }}</a>
             </li>
             {{ end }}

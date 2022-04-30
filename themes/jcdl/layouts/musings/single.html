@@ -6,7 +6,7 @@
 </ul>
 <div class="container">
 	<h1>{{ .Title }}</h1>
-	<span class="post-date">Posted on {{ .Date.Format "Jan 02, 2006" }}</span>
+	{{ partial "snippets/postdate.html" . }}
 	{{ with .Params.tags }}
 	<ul class="tags">
 		{{ range . }}
