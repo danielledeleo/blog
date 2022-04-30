@@ -58,6 +58,10 @@
 		{{ if .Site.Params.src }}
         <li><span class="link-arrow">=&gt; </span><a href="{{ .Site.Params.src }}">source code</a></li>
 		{{ end }}
+
+		{{ if .Site.Params.License }}
+        <li><span class="link-arrow">=&gt; <span class=""><a href="{{ site.Params.License }}">license</a></span></li>
+		{{ end }}
 	</ul>
 	<ul class="link-list">
 		{{ range where .Site.RegularPages "Type" "meta" }}

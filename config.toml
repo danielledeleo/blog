@@ -10,6 +10,7 @@ relativeURLs = true
   configDir = "config/"
   src = "https://gitlab.com/jagger27/blog/"
   commitPath = "-/commit/"
+  license = "https://gitlab.com/jagger27/blog/-/blob/main/LICENSE"
 
 [links]
   twitter = "https://twitter.com/jagger27"
