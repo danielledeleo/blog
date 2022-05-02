@@ -2,3 +2,4 @@ public/
 data/git.toml
 .DS_Store
 
+.hugo_build.lock
