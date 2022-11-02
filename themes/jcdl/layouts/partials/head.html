@@ -7,6 +7,7 @@
 		{{ $syntax := resources.Get "css/syntax.css" }}
 		{{ $css := slice $main $syntax | resources.Concat "css/bundle.css" | minify }}
 		<link href="{{ $css.RelPermalink }}" rel="stylesheet">
+		<link rel="icon" href="favicon.png">
 		<meta name="generator" content="Hugo {{ hugo.Version }}">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 	</head>
