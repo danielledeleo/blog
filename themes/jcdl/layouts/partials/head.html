@@ -3,8 +3,10 @@
 	<head>
 		{{ printf "<!-- Generated on %s -->"  (now.Format "Mon Jan 2 15:04:05 MST 2006") | safeHTML }}
 		<title>{{ site.Title }}{{ if .Title }} / {{ .Title }}{{ end }}</title>
-		<link rel="stylesheet" href="/css/main.css" />
-		<link rel="stylesheet" href="/css/syntax.css" />
+		{{ $main := resources.Get "css/main.css" }}
+		{{ $syntax := resources.Get "css/syntax.css" }}
+		{{ $css := slice $main $syntax | resources.Concat "css/bundle.css" | minify }}
+		<link href="{{ $css.RelPermalink }}" rel="stylesheet">
 		<meta name="generator" content="Hugo {{ hugo.Version }}">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 	</head>
