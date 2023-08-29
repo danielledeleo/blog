@@ -35,17 +35,11 @@
 	src: url("/fonts/Inter-italic.var.woff2?v=3.19") format("woff2");
 }
 
-@font-face {
-	font-family: "JetBrains Mono Light";
-	src: local("JetBrains Mono Light"),
-		local("JetBrainsMono-Light"),
-		url('/fonts/JetBrainsMono-Light.woff2') format('woff2');
-}
-
 body {
 	background-color: var(--main-bg-colour);
 	color: var(--foreground-colour);
-	font-family: "JetBrains Mono Light", "Andale Mono", monospace;
+	font-family: "JetBrains Mono", "Andale Mono", monospace;
+	font-weight: 400;
 	font-size: 14px;
 
 	/* reset */
@@ -59,7 +53,11 @@ h3,
 h4,
 h5,
 code {
-	font-family: "JetBrains Mono Light", "Andale Mono", monospace;
+	font-family: "JetBrains Mono", "Andale Mono", monospace;
+}
+
+h1.index-title {
+	font-family: 'Inter var', 'Helvetica', sans-serif;
 }
 
 h1,
@@ -70,6 +68,7 @@ h5 {
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 
+	font-weight: 600;
 	margin: 2.5rem 0 0 0;
 	padding: 0;
 }
@@ -81,6 +80,8 @@ h1 {
 h1::before,
 h2::before,
 h3::before {
+	font-weight: 600;
+
 	color: var(--comment-dark);
 	margin: 0 0.75rem 0 0;
 }
@@ -139,6 +140,14 @@ figcaption {
 	line-height: 1;
 }
 
+p {
+	font-weight: 400;
+}
+
+code, ul, ol {
+	font-weight: 300;
+}
+
 pre>code {
 	overflow-x: scroll;
 	scrollbar-width: none;
@@ -153,6 +162,7 @@ p>code {
 	font-size: 0.9rem;
 	background-color: var(--selection-bg-colour);
 	padding: 0.1rem 0.25rem;
+	font-weight: 400;
 }
 
 [data-lang] {
@@ -232,7 +242,6 @@ hr {
 .container {
 	padding: 0 1.5rem;
 }
-
 
 .content>ul,
 .content>ol {

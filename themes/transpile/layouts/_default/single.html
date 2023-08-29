@@ -1,6 +1,6 @@
 {{ partial "head.html" . }}
 <ul class="breadcrumbs">
-  <li><a href="/">transpile.net</a>/</li>
+	<li><a href="/">{{ .Site.Title }}</a>/</li>
 	<li><a href="/{{ .Type }}">{{ .Type }}</a>/</li>
 	<li><a href="{{ .Permalink }}">{{ lower .Title }}</a></li>
 </ul>

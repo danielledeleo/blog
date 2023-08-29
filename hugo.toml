@@ -1,0 +1,13 @@
+baseURL = "/"
+languageCode = "en-ca"
+title = "transpile.net"
+theme = "transpile"
+pygmentsUseClasses = true
+relativeURLs = true 
+
+[params]
+  pageTitle = "transpile/blog"
+  src = "https://gitlab.com/transpile/blog/"
+  commitPath = "-/commit/"
+  license = "https://gitlab.com/transpile/blog/-/blob/main/LICENSE"
+  author = "dani"
