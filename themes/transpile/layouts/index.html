@@ -1,7 +1,7 @@
 {{ $musings := .Paginate (where .Site.RegularPages "Type" "musings") 2 }}
 {{ partial "head.html" }}
 <ul class="breadcrumbs">
- 	<li><a href="/">jcdl.net</a>/</li>
+ 	<li><a href="/">transpile.net</a>/</li>
 </ul>
 <div class="container">
 	<h1>{{ .Site.Title }}</h1>
@@ -43,8 +43,8 @@
 		{{ end }}
 	</ul>
 
-	<h2>social</h2>
-	{{ partial "social.html" }}
+	<h2>external</h2>
+	{{ partial "links.html" }}
 
 	<h2>meta</h2>
     <ul class="link-list">

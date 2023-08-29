@@ -1,0 +1,11 @@
+name = "transpile"
+license = "MIT"
+licenselink = "https://gitlab.com/transpile/blog/-/blob/master/themes/transpile/LICENSE"
+description = ""
+tags = []
+features = []
+min_version = "0.117.0"
+
+[author]
+  name = ""
+  homepage = ""

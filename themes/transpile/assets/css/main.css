@@ -105,32 +105,43 @@ p {
 	background-color: var(--selection-bg-dark);
 }
 
-p, .heart {
+p, figcaption, .heart {
 	font-family: 'Inter', 'Helvetica', sans-serif;
 }
 
 @supports (font-variation-settings: normal) {
-	p, .heart {
+	p, figcaption, .heart {
 		font-family: 'Inter var', 'Helvetica', sans-serif;
 	}
 }
 
-/* footnotes */
-.footnotes>ol {
+figure {
+	margin: 1.5rem -1.5rem;
+	padding: 0;
+	line-height: 0;
+
+	background-color: var(--selection-bg-dark);
+}
+
+figure a {
+	display: inline-block;
+}
+
+figure img {
 	padding: 0;
 }
 
-.footnotes>ol>li {
-	padding: 0 0 0 1.5rem;
-}
+figcaption {
+	font-style: italic;
+	color: var(--foreground-mid);
 
-.footnote-backref {
-	font-size: 0.8rem;
-	text-decoration: none;
+	padding: 1rem 1.5rem 1rem 1.5rem;
+	line-height: 1;
 }
 
 pre>code {
 	overflow-x: scroll;
+	scrollbar-width: none;
 
 	display: block;
 	padding: 1.5rem;
@@ -160,15 +171,31 @@ a {
 }
 
 hr {
-	margin: 2rem 0;
+	margin: 2rem -1.5rem;
 	border: none;
-	border-top: solid 4px;
-	border-color: var(--comment-colour);
+	border-top: solid 3px;
+	border-color: var(--comment-dark);
+}
+
+/* footnotes */
+.footnotes>ol {
+	padding: 0;
+	margin: 0 -1.5rem;
+}
+
+.footnotes>ol>li {
+	padding: 0 1.5rem;
+	margin: 0 1.5rem 0 2.5rem;
+}
+
+.footnote-backref {
+	font-size: 0.8rem;
+	text-decoration: none;
 }
 
 @media only screen and (min-width: 680px) {
 	body {
-		font-size: 15px;
+		font-size: 16px;
 	}
 
 	.container {
@@ -195,6 +222,11 @@ hr {
 	pre {
 		margin: 1.5rem -1.5rem;
 	}
+
+	.footnotes>ol>li {
+		padding: 0 1.5rem;
+		margin: 0;
+	}
 }
 
 .container {
@@ -204,7 +236,8 @@ hr {
 
 .content>ul,
 .content>ol {
-	padding: 0rem 2.5rem;
+	padding: 0rem 1.5rem;
+	margin: 0 -1.5rem;
 }
 
 .content>ul>li {

@@ -1,5 +1,5 @@
 <ul class="link-list">
-    {{ range $key, $val := site.Data.social }}
+    {{ range $key, $val := site.Data.links }}
         <li><span class="link-arrow">=> </span><a rel="me" href="{{ $val }}">{{ $key }}</a></li>
     {{ end }}
 </ul>

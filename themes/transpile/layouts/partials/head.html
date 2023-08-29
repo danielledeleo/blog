@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{ site.LanguageCode }}" >
 	<head>
 		{{ printf "<!-- Generated on %s -->"  (now.Format "Mon Jan 2 15:04:05 MST 2006") | safeHTML }}
 		<title>{{ site.Title }}{{ if .Title }} / {{ .Title }}{{ end }}</title>
@@ -7,7 +7,8 @@
 		{{ $syntax := resources.Get "css/syntax.css" }}
 		{{ $css := slice $main $syntax | resources.Concat "css/bundle.css" | minify }}
 		<link href="{{ $css.RelPermalink }}" rel="stylesheet">
-		<link rel="icon" href="favicon.png">
+		<link rel="icon" href="/favicon.png">
+		<meta charset="utf-8">
 		<meta name="generator" content="Hugo {{ hugo.Version }}">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 	</head>

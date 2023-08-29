@@ -1,11 +1,12 @@
 {{ partial "head.html" . }}
 <ul class="breadcrumbs">
-  <li><a href="/">jcdl.net</a>/</li>
+  <li><a href="/">transpile.net</a>/</li>
 	<li><a href="/{{ .Type }}">{{ .Type }}</a>/</li>
 	<li><a href="{{ .Permalink }}">{{ lower .Title }}</a></li>
 </ul>
 <div class="container">
 	<h1>{{ .Title }}</h1>
+	{{ .Scratch.Set "inner" "Posted on " }}
 	{{ partial "snippets/postdate.html" . }}
 	{{ with .Params.tags }}
 	<ul class="tags">
@@ -15,7 +16,7 @@
 	</ul>
 	{{ end }}
 	<div class="content">
-        {{ .Content }}
+		{{ .Content }}
 	</div>
 
   {{ partial "footer.html" }}

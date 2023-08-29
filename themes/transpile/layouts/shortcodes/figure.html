@@ -1,0 +1,23 @@
+{{- $image := $.Page.Resources.GetMatch (.Get "src") -}}
+{{- $thumbnail100 := $image.Resize "688x webp" -}}
+{{- $thumbnail150 := $image.Resize "1032x webp" -}}
+{{- $thumbnail200 := $image.Resize "1376x webp" -}}
+{{- $caption := .Get "caption" -}}
+{{- $alt := .Get "alt" -}}
+
+<figure>
+    <a href="{{ $image.RelPermalink }}">
+        <img
+        srcset="
+        {{- with $thumbnail100.RelPermalink -}}{{.}} 688w{{- end -}}
+        {{- with $thumbnail150.RelPermalink -}}{{.}} 1032w{{- end -}}
+        {{- with $thumbnail200.RelPermalink -}}{{.}} 1376w{{- end -}}
+        "
+        src="{{ $thumbnail200.RelPermalink }}"
+        width="100%"
+        title="{{ $alt }}" alt="{{ $alt }}" />
+    </a>
+    {{- with $caption -}}
+    <figcaption>{{ . }}</figcaption>
+    {{- end -}}
+</figure>
