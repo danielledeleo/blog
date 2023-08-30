@@ -1,53 +1,20 @@
-# This file is a template, and might need editing before it works on your project.
 ---
-# All available Hugo versions are listed here:
-# https://gitlab.com/pages/hugo/container_registry
 image: registry.gitlab.com/pages/hugo:latest
 
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
+  TZ: America/Toronto
 
 stages:
-  - test
-  - build
-  - deploy
+  - pages
 
-test:
-  stage: test
-  script:
-    - hugo
-  except:
-    - main
-
-build:
-  stage: build
+pages:
+  stage: pages
   script:
     - echo "commit = \"$CI_COMMIT_SHA\"" > data/git.toml
-    - hugo
-    - tar czf public.tar.gz public deploy.sh
+    - hugo --gc --minify
   artifacts:
     paths:
-      - public.tar.gz
+      - public
   only:
     - main
-
-deploy:
-  image: alpine:latest
-  stage: deploy
-  before_script:
-    - apk update && apk add openssh-client bash
-  script:
-    # run ssh-agent
-    - eval $(ssh-agent -s)
-
-    # add ssh key stored in SSH_PRIVATE_KEY variable to the agent store
-    # encoded in base64 so it can be masked in the CI logs
-    - (umask 0077; echo "$SSH_PRIVATE_KEY" | base64 -d > /tmp/id)
-    - ssh-add /tmp/id && rm /tmp/id
-
-    - mkdir -p ~/.ssh
-    - echo "$SSH_KNOWN_HOSTS" > ~/.ssh/known_hosts
-
-    # ssh commands here
-    - scp public.tar.gz gitlab@$SSH_HOSTNAME:. 
-    - ssh gitlab@$SSH_HOSTNAME -C 'tar xzf public.tar.gz; ./deploy.sh'
