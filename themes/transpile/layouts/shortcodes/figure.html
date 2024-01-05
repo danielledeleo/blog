@@ -17,7 +17,11 @@
         width="100%"
         title="{{ $alt }}" alt="{{ $alt }}" />
     </a>
+    {{- with .Inner }}
+    <figcaption>{{ . }}</figcaption>
+    {{- else -}}
     {{- with $caption -}}
     <figcaption>{{ . }}</figcaption>
+    {{- end -}}
     {{- end -}}
 </figure>

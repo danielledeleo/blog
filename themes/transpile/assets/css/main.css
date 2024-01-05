@@ -414,3 +414,10 @@ a[href*='//'] {
 .p-violet {
 	background: #86007D;
 }
+
+#RSSicon {
+	display: inline;
+	vertical-align: middle;
+	width: 1rem;
+	height: 1rem;
+}
