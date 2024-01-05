@@ -320,6 +320,9 @@ hr {
 .link-arrow {
 	color: var(--comment-dark);
 }
+.link-arrow::before {
+	content: "=> "
+}
 
 .musing-list li {
 	margin: 0 0 1.5rem 0;
@@ -359,6 +362,12 @@ hr {
 
 a[href*='//'] {
 	color: var(--yellow-colour);
+}
+
+.copyright {
+	margin: 1rem 0 0 0;
+	font-family: Inter var, 'Helvetica', sans-serif;
+	font-size: 0.75rem;
 }
 
 .rights {

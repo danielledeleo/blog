@@ -10,7 +10,7 @@
 		{{ range $musings.Pages }}
 			<li>
 				{{ partial "snippets/postdate.html" . }}
-		  		<span class="link-arrow">=&gt; </span>
+		  		<span class="link-arrow"></span>
 				<a class="permalink" href="{{ .Permalink }}">{{.Title}}</a>
 				<span>
 					{{ .Content }}
@@ -19,7 +19,7 @@
 		{{ end }}
 	</ul>
 	{{ if $musings.HasNext }}
-	<span class="link-arrow">=&gt; </span><a href="{{ "musings" | absURL}}">{{ (where .Site.RegularPages "Type" "musings") | len | add -2 }} more</a>
+	<span class="link-arrow"></span><a href="{{ "musings" | absURL}}">{{ (where .Site.RegularPages "Type" "musings") | len | add -2 }} more</a>
 	{{ end }}
 
 	<h2>posts</h2>
@@ -51,40 +51,42 @@
 		{{ if site.Data.git }}
 		{{ $url := printf `%s%s` site.Params.src (path.Join site.Params.CommitPath site.Data.git.commit) }}
 		<li>
-			<span class="link-arrow">=&gt; </span>
+			<span class="link-arrow"></span>
 			<a href="{{ $url }}">changes</a>
 		</li>
 		{{ end }}
 		{{ if .Site.Params.src }}
-        <li><span class="link-arrow">=&gt; </span><a href="{{ .Site.Params.src }}">source code</a></li>
+        <li><span class="link-arrow"></span><a href="{{ .Site.Params.src }}">source code</a></li>
 		{{ end }}
 
 		{{ if .Site.Params.License }}
-        <li><span class="link-arrow">=&gt; <span class=""><a href="{{ site.Params.License }}">license</a></span></li>
+        <li><span class="link-arrow"><span class=""><a href="{{ site.Params.License }}">license</a></span></li>
 		{{ end }}
 	</ul>
 	<ul class="link-list">
 		{{ range where .Site.RegularPages "Type" "meta" }}
-			<li><span class="link-arrow">=&gt; </span><a href="{{ .Permalink }}"> {{ .Title}}</a></li>
+			<li><span class="link-arrow"></span><a href="{{ .Permalink }}"> {{ .Title}}</a></li>
 		{{ end }}
 	</ul>
 	<ul class="link-list">
 		<li>
-			<span class="link-arrow">=&gt; </span>
-			<a href="#">rss</a>
-
-			<svg xmlns="http://www.w3.org/2000/svg"
-				id="RSSicon"
-				viewBox="0 0 8 8">
-				<style type="text/css">
-					.b {stroke: none; fill: orange;}
-					.s {stroke: none; fill: white;}
-				</style>
-				<rect class="b" width="8" height="8"/>
-				<circle class="s" cx="2" cy="6" r="1" />
-				<path class="s" d="m 1,4 a 3,3 0 0 1 3,3 h 1 a 4,4 0 0 0 -4,-4 z" />
-				<path class="s" d="m 1,2 a 5,5 0 0 1 5,5 h 1 a 6,6 0 0 0 -6,-6 z" />
-			</svg>
+			<span class="link-arrow"></span>
+			{{- with page.OutputFormats.Get "rss" -}}
+			<a href="{{ .Permalink }}" alt="RSS Icon" title="rss">
+				<svg xmlns="http://www.w3.org/2000/svg"
+					id="RSSicon"
+					viewBox="0 0 8 8">
+					<style type="text/css">
+						.b {stroke: none; fill: orange;}
+						.s {stroke: none; fill: white;}
+					</style>
+					<rect class="b" width="8" height="8"/>
+					<circle class="s" cx="2" cy="6" r="1" />
+					<path class="s" d="m 1,4 a 3,3 0 0 1 3,3 h 1 a 4,4 0 0 0 -4,-4 z" />
+					<path class="s" d="m 1,2 a 5,5 0 0 1 5,5 h 1 a 6,6 0 0 0 -6,-6 z" />
+				</svg>
+			</a>
+			{{- end -}}
 		</li>
 	</ul>
 	{{ partial "footer.html" }}
