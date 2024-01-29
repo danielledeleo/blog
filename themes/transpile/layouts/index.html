@@ -45,6 +45,14 @@
 
 	<h2>external</h2>
 	{{ partial "links.html" }}
+	
+	<h2>about</h2>
+	{{ with .GetPage "meta/about" }}
+	<p>
+		{{ replaceRE "<p>(.+)</p>" "$1" .Summary}}
+		<a href="{{ .Permalink	}}">more...</a> {{/* Hack to insert the "more..." link into the paragraph */}}
+	</p>
+	{{ end }}
 
 	<h2>meta</h2>
     <ul class="link-list">

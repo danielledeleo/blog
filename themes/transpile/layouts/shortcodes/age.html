@@ -1,0 +1,9 @@
+{{- $birthday := .Get "birthday" -}}
+{{- $birthTime := time.AsTime $birthday -}}
+{{- $thisYear := time.AsTime (strings.Replace $birthday $birthTime.Year now.Year) -}}
+{{- $age := math.Sub $thisYear.Year $birthTime.Year }}
+{{- if ge now.Unix $thisYear.Unix -}}
+    {{- $age -}}
+{{- else -}}
+    {{- math.Sub $age 1 -}}
+{{- end -}}
