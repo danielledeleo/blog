@@ -5,9 +5,12 @@ theme = "transpile"
 pygmentsUseClasses = true
 relativeURLs = true 
 
+[params.author]
+  name = "Danielle De Leo"
+
 [params]
   pageTitle = "transpile/blog"
   src = "https://gitlab.com/transpile/blog/"
   commitPath = "-/commit/"
   license = "https://gitlab.com/transpile/blog/-/blob/main/LICENSE"
-  author = "dani"
+  footerMessage = "The opinions presented here are mine alone. They do not represent the views of my employers, past or present. I assert that no written content on this site was produced in whole or in part by an LLM."
