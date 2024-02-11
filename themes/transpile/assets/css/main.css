@@ -384,6 +384,11 @@ a[href*='//'] {
 	font-size: 0.75rem;
 }
 
+.webring {
+	margin: 1.5rem 0 0 0;
+	font-size: 0.75rem;
+}
+
 .rights {
 	margin: 0.75rem 0 0 0;
 	display: flex;
