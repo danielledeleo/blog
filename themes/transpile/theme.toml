@@ -1,5 +1,5 @@
 name = "transpile"
-license = "AGPLv3"
+license = "MIT"
 licenselink = "https://gitlab.com/transpile/blog/-/blob/main/themes/transpile/LICENSE"
 description = "The bespoke theme for transpile.net"
 tags = []
