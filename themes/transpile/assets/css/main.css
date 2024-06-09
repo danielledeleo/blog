@@ -106,6 +106,10 @@ p {
 	background-color: var(--selection-bg-dark);
 }
 
+sup {
+	line-height: 0;
+}
+
 p, figcaption, .heart {
 	font-family: 'Inter', 'Helvetica', sans-serif;
 }
