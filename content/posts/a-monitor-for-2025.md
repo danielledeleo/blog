@@ -163,9 +163,9 @@ some day soon with a faster panel. 5K would be really nice to have.
 ## Dough Spectrum One
 
 **DO NOT BUY the monitor described in this section from Dough (formerly Eve).
-The company is as sketchy as they get. They have a
-[long](https://en.wikipedia.org/wiki/Eve_V)[^3] ongoing
-[pattern](https://www.reddit.com/r/evev/)[^4] pattern and history of [fraudulent
+The company is as sketchy as they get. They have an
+[ongoing](https://en.wikipedia.org/wiki/Eve_V)[^3] 
+[history](https://www.reddit.com/r/evev/)[^4] of [fraudulent
 business practices](https://www.doughscam.com/)[^5]. In my PERSONAL EXPERIENCE, I
 was not able to make warranty claims for the two monitors I bought during the 1
 year warranty period. PLEASE DO NOT SPEND YOUR MONEY ON DOUGH PRODUCTS. I deeply
