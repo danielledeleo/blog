@@ -8,6 +8,8 @@ resources:
 - src: "images/*.jpg"
 ---
 
+- Discuss on [Hacker News](https://news.ycombinator.com/item?id=40627264)
+
 _This post is an extension of a [rant
 thread](https://hachyderm.io/@ddl/112584091556177153)[^0] I wrote recently._
 
