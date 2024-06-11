@@ -4,17 +4,17 @@
  	<li><a href="/">{{ .Site.Title }}</a>/</li>
 </ul>
 <div class="container">
-	<h1 class="index-title">{{ .Site.Title }}</h1>
-	<h2>musings</h2>
+	<h1 id="title" class="index-title"><a href="#title">#</a>{{ .Site.Title }}</h1>
+	<h2 id="musings"><a href="#musings">##</a>musings</h2>
 	<ul class="musing-list">
 		{{ range $musings.Pages }}
 			<li>
 				{{ partial "snippets/postdate.html" . }}
 		  		<span class="link-arrow"></span>
 				<a class="permalink" href="{{ .Permalink }}">{{.Title}}</a>
-				<span>
+				<div class="musing-content">
 					{{ .Content }}
-				</span>
+				</div>
 			</li>
 		{{ end }}
 	</ul>
@@ -22,7 +22,7 @@
 	<span class="link-arrow"></span><a href="{{ "musings" | absURL}}">{{ (where .Site.RegularPages "Type" "musings") | len | add -2 }} more</a>
 	{{ end }}
 
-	<h2>posts</h2>
+	<h2 id="posts"><a href="#posts">##</a>posts</h2>
 	<ul class="post-list">
 		{{ range where .Site.RegularPages "Type" "posts" }}
 			<li>
@@ -32,7 +32,7 @@
 		{{ end }}
 	</ul>
 
-	<h2>projects</h2>
+	<h2 id="projects"><a href="#projects">##</a>projects</h2>
 	<ul class="post-list">
 		{{ range where .Site.RegularPages "Type" "projects" }}
 			<li>
@@ -43,10 +43,10 @@
 		{{ end }}
 	</ul>
 
-	<h2>external</h2>
+	<h2 id="external"><a href="#external">##</a>external</h2>
 	{{ partial "links.html" }}
 	
-	<h2>about</h2>
+	<h2 id="about"><a href="#about">##</a>about</h2>
 	{{ with .GetPage "meta/about" }}
 	<p>
 		{{ replaceRE "<p>(.+)</p>" "$1" .Summary}}
@@ -54,7 +54,7 @@
 	</p>
 	{{ end }}
 
-	<h2>meta</h2>
+	<h2 id="meta"><a href="#meta">##</a>meta</h2>
     <ul class="link-list">
 		{{ if site.Data.git }}
 		{{ $url := printf `%s%s` site.Params.src (path.Join site.Params.CommitPath site.Data.git.commit) }}
