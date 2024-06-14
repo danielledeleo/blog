@@ -35,6 +35,10 @@
 	src: url("/fonts/Inter-italic.var.woff2?v=3.19") format("woff2");
 }
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	background-color: var(--main-bg-colour);
 	color: var(--foreground-colour);
@@ -124,23 +128,25 @@ figure {
 	line-height: 0;
 
 	background-color: var(--selection-bg-dark);
+
+	img {
+		padding: 0;
+	}
+
+	a {
+		display: inline-block;
+	}
+
+
+	figcaption {
+		font-style: italic;
+		color: var(--foreground-mid);
+
+		padding: 1rem 1.5rem 1rem 1.5rem;
+		line-height: 1;
+	}
 }
 
-figure a {
-	display: inline-block;
-}
-
-figure img {
-	padding: 0;
-}
-
-figcaption {
-	font-style: italic;
-	color: var(--foreground-mid);
-
-	padding: 1rem 1.5rem 1rem 1.5rem;
-	line-height: 1;
-}
 
 p {
 	font-weight: 400;
@@ -179,7 +185,7 @@ p>code {
 }
 
 a {
-	color: var(--orange-colour);
+	color: var(--yellow-colour);
 }
 
 hr {
@@ -189,21 +195,29 @@ hr {
 	border-color: var(--comment-dark);
 }
 
-/* footnotes */
-.footnotes>ol {
-	padding: 0;
-	margin: 0 -1.5rem;
+.footnotes {
+	ol {
+		background-color: var(--selection-bg-dark);
+		padding: 1rem 1.5rem 1rem 3.5rem;
+		margin: 0rem -1.5rem;
+
+		li {
+			margin: 0;
+			padding: 0.5rem 0;
+
+			p {
+				margin: 0;
+				padding: 0;
+			}
+		}
+	}
+
+	.footnote-backref {
+		font-size: 0.8rem;
+		text-decoration: none;
+	}
 }
 
-.footnotes>ol>li {
-	padding: 0 1.5rem;
-	margin: 0 1.5rem 0 2.5rem;
-}
-
-.footnote-backref {
-	font-size: 0.8rem;
-	text-decoration: none;
-}
 
 @media only screen and (min-width: 680px) {
 	body {
@@ -233,11 +247,6 @@ hr {
 
 	pre {
 		margin: 1.5rem -1.5rem;
-	}
-
-	.footnotes>ol>li {
-		padding: 0 1.5rem;
-		margin: 0;
 	}
 }
 
@@ -321,6 +330,9 @@ hr {
 
 .post-date {
 	color: var(--foreground-dark);
+	[title] {
+		text-decoration: underline dashed var(--selection-bg-colour);
+	}
 }
 
 .link-arrow {
@@ -330,16 +342,16 @@ hr {
 	content: "=> "
 }
 
-.musing-list li {
-	margin: 0 0 1.5rem 0;
-}
-
-.musing-list li p {
-	margin: 0rem -1.5rem;
-}
-
-.musing-list .musing-content {
-	margin: 0.5rem 0 1.5rem 0;
+.musing-list {
+	li {
+		margin: 0 0 1.5rem 0;
+		p {
+			margin: 0rem -1.5rem;
+		}
+	}
+	.musing-content {
+		margin: 0.5rem 0 1.5rem 0;
+	}
 }
 
 .tags {
@@ -406,6 +418,7 @@ a[href*='//'] {
 }
 
 .flag {
+	cursor: help;
 	display: flex;
 	flex-direction: column;
 	width: 2rem;

@@ -15,7 +15,9 @@
         <li>
             {{ partial "snippets/postdate.html" . }}
             <a href="{{ .Permalink }}">{{ .Params.Title }}</a>
-            {{ .Content }}
+            <div class="musing-content">
+                {{ .Content }}
+            </div>
         </li>
         {{ end }}
     </ul>

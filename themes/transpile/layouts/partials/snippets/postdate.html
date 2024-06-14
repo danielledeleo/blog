@@ -1,2 +1,1 @@
-<span class="post-date" title="{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}"><time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00"}}">{{ .Scratch.Get "inner" }}{{ .Date.Format "02 Jan 2006" }}</time></span>
-{{ .Scratch.Delete "inner" }}
+<span class="post-date">{{ .Scratch.Get "inner" }}<time title="{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00"}}">{{ .Date.Format "02 Jan 2006" }}</time></span>

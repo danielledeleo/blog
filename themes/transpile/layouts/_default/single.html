@@ -6,8 +6,9 @@
 </ul>
 <div class="container">
 	<h1>{{ .Title }}</h1>
-	{{ .Scratch.Set "inner" "Posted on " }}
+	{{ .Page.Scratch.Set "inner" "Posted on " }}
 	{{ partial "snippets/postdate.html" . }}
+	{{ .Page.Scratch.Delete "inner" }}
 	{{ with .Params.tags }}
 	<ul class="tags">
 		{{ range . }}
