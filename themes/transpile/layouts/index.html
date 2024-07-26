@@ -78,8 +78,9 @@
 	</ul>
 	<ul class="link-list">
 		<li>
+			{{- $posts := site.GetPage "section" "posts" -}}
 			<span class="link-arrow"></span>
-			{{- with page.OutputFormats.Get "rss" -}}
+			{{- with $posts.OutputFormats.Get "rss" -}}
 			<a href="{{ .Permalink }}" alt="RSS Icon" title="rss">
 				<svg xmlns="http://www.w3.org/2000/svg"
 					id="RSSicon"
