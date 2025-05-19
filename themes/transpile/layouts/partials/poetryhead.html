@@ -1,0 +1,23 @@
+{{- /* Remember to update poetryhead.html too! */ -}}
+<!DOCTYPE html>
+<html lang="{{ site.LanguageCode }}" >
+	<head>
+		{{ printf "<!-- Generated on %s -->"  (now.Format "Mon Jan 2 15:04:05 MST 2006") | safeHTML }}
+		<title>{{ site.Title }}{{ if .Title }} / {{ .Title }}{{ end }}</title>
+		{{- $main := resources.Get "css/poetry.css" -}}
+		{{- $footer := resources.Get "css/footer.css" -}}
+		{{- $css := slice $main $footer | resources.Concat "css/poetry.css" | minify -}}
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap" rel="stylesheet">
+		<link href="{{ $css.RelPermalink }}" rel="stylesheet">
+		<link rel="icon" href="/favicon.png">
+		{{ with page.OutputFormats.Get "rss" -}}
+			{{ printf `<link rel=%q type=%q href=%q title=%q>` .Rel .MediaType.Type .Permalink site.Title | safeHTML }}
+		{{- end }}
+		
+		<meta charset="utf-8">
+		<meta name="generator" content="Hugo {{ hugo.Version }}">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+<body>

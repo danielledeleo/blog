@@ -1,0 +1,17 @@
+{{ partial "poetryhead.html" . }}
+<div class="breadcrumbs">
+    <li><a href="/">{{ .Site.Title }}</a>/</li>
+    <li><a href="/{{ .Type }}">{{ .Type }}</a>/</li>
+    <li><a href="{{ .Permalink }}">{{ lower .Title }}</a></li>
+</div>
+<div class="container">
+	<h1 class="stay-visible">{{ .Title }}</h1>
+	<div class="content prose">
+        {{ .Content }}
+	</div>
+  <span class="post-date"><time title="{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00"}}">{{ .Date.Format "2006-01-02" }}</time></span>
+
+  {{ partial "footer.html" }}
+</div>
+</body>
+</html>

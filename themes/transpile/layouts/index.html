@@ -32,6 +32,16 @@
 		{{ end }}
 	</ul>
 
+	<h2 id="poems"><a href="#poems">##</a>poems</h2>
+	<ul class="post-list">
+		{{ range where .Site.RegularPages "Type" "poems" }}
+			<li>
+				{{ partial "snippets/postdate.html" . }}
+				<a href="{{ .Permalink	}}">{{ .Title}}</a>
+			</li>
+		{{ end }}
+	</ul>
+
 	<h2 id="projects"><a href="#projects">##</a>projects</h2>
 	<ul class="post-list">
 		{{ range where .Site.RegularPages "Type" "projects" }}

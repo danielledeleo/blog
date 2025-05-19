@@ -1,0 +1,83 @@
+@keyframes wiggle {
+	0% { transform: rotate(0deg); }
+	5% { transform: rotate(7.5deg); }
+	15% { transform: rotate(-7.5deg); }
+	20% { transform: rotate(0deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.heart {
+	cursor: default;
+	display: inline-block;
+	color: var(--pink-colour);
+}
+
+.heart:hover {
+	animation: wiggle 1.5s ease-out infinite;
+}
+
+.copyright {
+	margin: 1rem 0 0 0;
+	font-family: Inter var, 'Helvetica', sans-serif;
+	font-size: 0.75rem;
+}
+
+.webring {
+	margin: 1.5rem 0 0 0;
+	font-size: 0.75rem;
+}
+
+.rights {
+	margin: 0.75rem 0 0 0;
+	display: flex;
+	column-gap: 0.5rem;
+}
+
+.flag {
+	cursor: help;
+	display: flex;
+	flex-direction: column;
+	width: 2rem;
+	height: 1.2rem;
+}
+
+.stripe {
+	flex-grow: 1;
+	width: 100%;
+}
+
+.t-blue {
+	background: #55CDFC;
+}
+
+.t-pink {
+	background: #F7A8B8;
+}
+
+.t-white {
+	background: #FFF;
+}
+
+.p-red {
+	background: #FF0018;
+}
+
+.p-orange {
+	background: #FFA52C;
+}
+
+.p-yellow {
+	background: #FFFF41;
+}
+
+.p-green {
+	background: #008018;
+}
+
+.p-blue {
+	background: #0000F9;
+}
+
+.p-violet {
+	background: #86007D;
+}
