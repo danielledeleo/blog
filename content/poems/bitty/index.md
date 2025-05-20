@@ -19,7 +19,7 @@ Darlington sneeze
 Hey there you lizard,
 Did you take my keys?
 
-Littemost creature
+Littlemost creature
 Plotting most crimes
 Softness my sidekick,
 You're always on time
